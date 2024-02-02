@@ -61,7 +61,9 @@ To read the fifo:
 python uhal_backend_v3.py --fifo
 ```
 
-there is a line added to the end of the --fifo protocol that resets the link capture links. This was needed because of a probable bug in the fw. (This line)[https://github.com/akgrummer/minnTrip2024Jan/blob/0fbd62700e72f98232240e462b07c43641f3d5e3/uhal_backend_v3.py#L333] should be removed if issue is resolved. The issue was that fifo on links 8-11 were automatically getting filled after the first l1a and no subsequent l1a. 
+there is a line added to the end of the --fifo protocol that resets the link capture links. This was needed because of a probable bug in the fw. This line
+https://github.com/akgrummer/minnTrip2024Jan/blob/0fbd62700e72f98232240e462b07c43641f3d5e3/uhal_backend_v3.py#L333
+should be removed if issue is resolved. The issue was that fifo on links 8-11 were automatically getting filled after the first l1a and no subsequent l1a. 
 
 uhal_backend_v3.py also has other arguements for parsing the uhal dictionary and writing individual registers (has been useful for debugging).
 
