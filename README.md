@@ -16,10 +16,9 @@ To send a different configuration to the ROC, edit or use a different `yaml` [fi
 inital econ configuration was performed with `econ_configure.py` [here](https://github.com/akgrummer/minnTrip2024Jan/blob/main/econ_configure.py).
 
 we used EC communcation to talk to the trigger lpbgt and i2c to talk the econ-T-P1:
-transactor needs a broadcast address:
-cfg = { 'broadcast_address' : 2 }
-trigger lpgbt is on address 0x71
-econ was on bus 1 of the lpgbt, and address `0x21`
+- transactor needs a broadcast address: `cfg = { 'broadcast_address' : 2 }`
+- trigger lpgbt is on address 0x71
+- econ was on bus 1 of the lpgbt, and address `0x21`
 
 Jeremy used a script to scan the i2c addresses in hgc-engine-tools. [i2c_scan_engine.py](https://gitlab.cern.ch/cms-hgcal-firmware/hgc-engine-tools/-/blob/c5f7c8ed54e23bd10f4b6bdc1e64216b064a7783/i2c_scan_engine.py)
 
@@ -71,16 +70,19 @@ This was tested on a DAQ capture for one link. TRIG links can also be configured
 
 
 # python virtual environment in aidan's directory:
+
 python venv setup:
 
 python -m venv --system-site-packages ~/pyenv/tilebd
 
 source ~/pyenv/tilebd/bin/active
 
+Note: Billy has his own virtual environment setup the same way in his directory.
+
 ## To remove packages Aidan installed:
 
 delete this directory.
-/home/agrummer/pyenv/tilebd
+`/home/agrummer/pyenv/tilebd`
 
 ## installed packages in virtual environment:
 
